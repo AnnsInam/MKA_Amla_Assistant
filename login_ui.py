@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'Login.ui'
 #
-# Created: Sun Feb 14 14:25:57 2016
+# Created: Sun Feb 14 21:47:23 2016
 #      by: PyQt4 UI code generator 4.11.3
 #
 # WARNING! All changes made in this file will be lost!
@@ -27,7 +27,7 @@ class Ui_Login(object):
     def setupUi(self, Login):
         Login.setObjectName(_fromUtf8("Login"))
         Login.setWindowModality(QtCore.Qt.WindowModal)
-        Login.resize(204, 122)
+        Login.resize(176, 122)
         Login.setStyleSheet(_fromUtf8("QDialog\n"
 "{\n"
 "background-color: rgb(0, 0, 255);\n"
@@ -67,37 +67,51 @@ class Ui_Login(object):
 "    background-color: black;\n"
 "}\n"
 ""))
-        self.layoutWidget = QtGui.QWidget(Login)
-        self.layoutWidget.setGeometry(QtCore.QRect(20, 10, 161, 97))
-        self.layoutWidget.setObjectName(_fromUtf8("layoutWidget"))
-        self.gridLayout = QtGui.QGridLayout(self.layoutWidget)
-        self.gridLayout.setMargin(0)
+        self.gridLayout = QtGui.QGridLayout(Login)
         self.gridLayout.setObjectName(_fromUtf8("gridLayout"))
-        self.label = QtGui.QLabel(self.layoutWidget)
-        self.label.setObjectName(_fromUtf8("label"))
-        self.gridLayout.addWidget(self.label, 0, 0, 1, 1)
-        self.Username = QtGui.QLineEdit(self.layoutWidget)
-        self.Username.setObjectName(_fromUtf8("Username"))
-        self.gridLayout.addWidget(self.Username, 0, 1, 1, 1)
-        self.label_2 = QtGui.QLabel(self.layoutWidget)
-        self.label_2.setObjectName(_fromUtf8("label_2"))
-        self.gridLayout.addWidget(self.label_2, 1, 0, 1, 1)
-        self.Password = QtGui.QLineEdit(self.layoutWidget)
-        self.Password.setStyleSheet(_fromUtf8(""))
-        self.Password.setEchoMode(QtGui.QLineEdit.Password)
-        self.Password.setObjectName(_fromUtf8("Password"))
-        self.gridLayout.addWidget(self.Password, 1, 1, 1, 1)
-        self.LoginBtn = QtGui.QPushButton(self.layoutWidget)
-        self.LoginBtn.setStyleSheet(_fromUtf8(""))
-        self.LoginBtn.setObjectName(_fromUtf8("LoginBtn"))
-        self.gridLayout.addWidget(self.LoginBtn, 2, 1, 1, 1)
+        self.Language_LBL = QtGui.QLabel(Login)
+        self.Language_LBL.setMaximumSize(QtCore.QSize(100, 16777215))
+        self.Language_LBL.setObjectName(_fromUtf8("Language_LBL"))
+        self.gridLayout.addWidget(self.Language_LBL, 0, 0, 1, 1)
+        self.Language_CBOX = QtGui.QComboBox(Login)
+        self.Language_CBOX.setMaximumSize(QtCore.QSize(100, 16777215))
+        self.Language_CBOX.setObjectName(_fromUtf8("Language_CBOX"))
+        self.Language_CBOX.addItem(_fromUtf8(""))
+        self.Language_CBOX.addItem(_fromUtf8(""))
+        self.gridLayout.addWidget(self.Language_CBOX, 0, 1, 1, 1)
+        self.Username_LBL = QtGui.QLabel(Login)
+        self.Username_LBL.setMaximumSize(QtCore.QSize(100, 16777215))
+        self.Username_LBL.setObjectName(_fromUtf8("Username_LBL"))
+        self.gridLayout.addWidget(self.Username_LBL, 1, 0, 1, 1)
+        self.Username_LINE = QtGui.QLineEdit(Login)
+        self.Username_LINE.setMaximumSize(QtCore.QSize(100, 16777215))
+        self.Username_LINE.setObjectName(_fromUtf8("Username_LINE"))
+        self.gridLayout.addWidget(self.Username_LINE, 1, 1, 1, 1)
+        self.Password_LBL = QtGui.QLabel(Login)
+        self.Password_LBL.setMaximumSize(QtCore.QSize(100, 16777215))
+        self.Password_LBL.setObjectName(_fromUtf8("Password_LBL"))
+        self.gridLayout.addWidget(self.Password_LBL, 2, 0, 1, 1)
+        self.Password_LINE = QtGui.QLineEdit(Login)
+        self.Password_LINE.setMaximumSize(QtCore.QSize(100, 16777215))
+        self.Password_LINE.setStyleSheet(_fromUtf8(""))
+        self.Password_LINE.setEchoMode(QtGui.QLineEdit.Password)
+        self.Password_LINE.setObjectName(_fromUtf8("Password_LINE"))
+        self.gridLayout.addWidget(self.Password_LINE, 2, 1, 1, 1)
+        self.Login_BTN = QtGui.QPushButton(Login)
+        self.Login_BTN.setMaximumSize(QtCore.QSize(100, 16777215))
+        self.Login_BTN.setStyleSheet(_fromUtf8(""))
+        self.Login_BTN.setObjectName(_fromUtf8("Login_BTN"))
+        self.gridLayout.addWidget(self.Login_BTN, 3, 1, 1, 1)
 
         self.retranslateUi(Login)
         QtCore.QMetaObject.connectSlotsByName(Login)
 
     def retranslateUi(self, Login):
         Login.setWindowTitle(_translate("Login", "Dialog", None))
-        self.label.setText(_translate("Login", "Username:", None))
-        self.label_2.setText(_translate("Login", "Password:", None))
-        self.LoginBtn.setText(_translate("Login", "Login", None))
+        self.Language_LBL.setText(_translate("Login", "Language", None))
+        self.Language_CBOX.setItemText(0, _translate("Login", "English", None))
+        self.Language_CBOX.setItemText(1, _translate("Login", "Geman", None))
+        self.Username_LBL.setText(_translate("Login", "Username:", None))
+        self.Password_LBL.setText(_translate("Login", "Password:", None))
+        self.Login_BTN.setText(_translate("Login", "Login", None))
 
