@@ -1,4 +1,6 @@
 
+Languages = ['English', 'German']
+
 #Login Dialog
 Language = ['Language', 'Sprache']
 Username = ['Username', 'Benutzername']

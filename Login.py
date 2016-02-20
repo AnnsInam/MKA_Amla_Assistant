@@ -1,5 +1,6 @@
 from PyQt4 import QtCore, QtGui
 from login_ui import Ui_Login
+import Load_Setings
 from QSQL_Retriever import QSQL_Retriever
 import Labels
 
@@ -17,6 +18,8 @@ class Login(QtGui.QDialog):
 
         self.langInd = self.ui.Language_CBOX.currentIndex()
         self.ui.Language_CBOX.currentIndexChanged.connect(self.SetLanguage)
+
+        self.settings = Load_Setings()
 
     def SetLanguage(self):
         self.langInd = self.ui.Language_CBOX.currentIndex()

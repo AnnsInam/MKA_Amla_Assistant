@@ -14,6 +14,9 @@ class MainGUI(QtGui.QMainWindow):
         self.ui.Date.setText(time.strftime("%d/%m/%y"))
         self.Username = Username
 
+    def Create_Settings(self):
+        pass
+
 if __name__ == '__main__':
     import sys
     app = QtGui.QApplication(sys.argv)
