@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'Login.ui'
+# Form implementation generated from reading ui file 'ui/Login.ui'
 #
-# Created: Sun Feb 14 21:47:23 2016
+# Created: Mon Feb 22 18:31:17 2016
 #      by: PyQt4 UI code generator 4.11.3
 #
 # WARNING! All changes made in this file will be lost!
@@ -110,7 +110,7 @@ class Ui_Login(object):
         Login.setWindowTitle(_translate("Login", "Dialog", None))
         self.Language_LBL.setText(_translate("Login", "Language", None))
         self.Language_CBOX.setItemText(0, _translate("Login", "English", None))
-        self.Language_CBOX.setItemText(1, _translate("Login", "Geman", None))
+        self.Language_CBOX.setItemText(1, _translate("Login", "German", None))
         self.Username_LBL.setText(_translate("Login", "Username:", None))
         self.Password_LBL.setText(_translate("Login", "Password:", None))
         self.Login_BTN.setText(_translate("Login", "Login", None))

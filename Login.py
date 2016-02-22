@@ -12,7 +12,7 @@ class Login(QtGui.QDialog):
         self.ui = Ui_Login()
         self.ui.setupUi(self)
         self.ui.Password_LINE.setEnabled(False)
-        self.ui.Login_BTN.setEnabled(False)
+        # self.ui.Login_BTN.setEnabled(False)
 
         self.ui.Username_LINE.returnPressed.connect(self.VerifyUsername)
         self.ui.Password_LINE.returnPressed.connect(self.EnableLoginBtn)
@@ -20,6 +20,7 @@ class Login(QtGui.QDialog):
 
         self.settings = LoadSettings()
         self.langInd = self.settings[0]
+        self.ui.Username_LINE.setText(self.settings[1])
         self.ui.Language_CBOX.setCurrentIndex(self.langInd)
         self.SetLanguage()
         self.ui.Language_CBOX.currentIndexChanged.connect(self.SetLanguage)
@@ -32,7 +33,7 @@ class Login(QtGui.QDialog):
         self.ui.Username_LBL.setText(Labels.Username[self.langInd])
         self.ui.Password_LBL.setText(Labels.Password[self.langInd])
         self.ui.Login_BTN.setText(Labels.LoginBtn[self.langInd])
-        WriteSettings(0, self.ui.Language_CBOX.currentText())
+        WriteSettings('Language', self.ui.Language_CBOX.currentText())
 
     def VerifyUsername(self):
         Obj = QSQL_Retriever()
@@ -50,11 +51,13 @@ class Login(QtGui.QDialog):
         self.ui.LoginBtn.setEnabled(True)
 
     def DoLogin(self):
-        Obj = QSQL_Retriever()
-        Password = Obj.getPasswords_from_DB(self.index)
+        # Obj = QSQL_Retriever()
+        # Password = Obj.getPasswords_from_DB(self.index)
+        #
+        # if self.ui.Password.text() in Password:
+        #     print("Login successful")
+        #     self.accept()
+        # else:
+        #     QtGui.QMessageBox.about(self, "Error", "The Username and Password you entered don't match")
 
-        if self.ui.Password.text() in Password:
-            print("Login successful")
-            self.accept()
-        else:
-            QtGui.QMessageBox.about(self, "Error", "The Username and Password you entered don't match")
+        WriteSettings('Username', self.ui.Username_LINE.text())
