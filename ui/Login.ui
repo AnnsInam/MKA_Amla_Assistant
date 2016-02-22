@@ -86,7 +86,7 @@ QPushButton:pressed{
      </item>
      <item>
       <property name="text">
-       <string>Geman</string>
+       <string>German</string>
       </property>
      </item>
     </widget>

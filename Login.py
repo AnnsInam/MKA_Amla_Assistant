@@ -1,7 +1,9 @@
-from PyQt4 import QtCore, QtGui
-from login_ui import Ui_Login
-import Load_Setings
-from QSQL_Retriever import QSQL_Retriever
+from PyQt4 import QtGui
+
+from Settings import LoadSettings, WriteSettings
+from uiPy.login_ui import Ui_Login
+
+# from QSQL_Retriever import QSQL_Retriever
 import Labels
 
 class Login(QtGui.QDialog):
@@ -16,10 +18,11 @@ class Login(QtGui.QDialog):
         self.ui.Password_LINE.returnPressed.connect(self.EnableLoginBtn)
         self.ui.Login_BTN.clicked.connect(self.DoLogin)
 
-        self.langInd = self.ui.Language_CBOX.currentIndex()
+        self.settings = LoadSettings()
+        self.langInd = self.settings[0]
+        self.ui.Language_CBOX.setCurrentIndex(self.langInd)
+        self.SetLanguage()
         self.ui.Language_CBOX.currentIndexChanged.connect(self.SetLanguage)
-
-        self.settings = Load_Setings()
 
     def SetLanguage(self):
         self.langInd = self.ui.Language_CBOX.currentIndex()
@@ -29,6 +32,7 @@ class Login(QtGui.QDialog):
         self.ui.Username_LBL.setText(Labels.Username[self.langInd])
         self.ui.Password_LBL.setText(Labels.Password[self.langInd])
         self.ui.Login_BTN.setText(Labels.LoginBtn[self.langInd])
+        WriteSettings(0, self.ui.Language_CBOX.currentText())
 
     def VerifyUsername(self):
         Obj = QSQL_Retriever()
