@@ -8,3 +8,5 @@ Password = ['Password', 'Passwort']
 LoginBtn = ['Login', 'Einloggen']
 
 #Main Window
+Bismillah = ['In the name of Allah, the Gracious, the Merciful',
+             'Im Namen Allahs, des Gnadigen, des Barmherzigen']

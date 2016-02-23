@@ -28,7 +28,6 @@ class Login(QtGui.QDialog):
     def SetLanguage(self):
         self.langInd = self.ui.Language_CBOX.currentIndex()
         print 'Setting Language to ' + self.ui.Language_CBOX.currentText()
-        print self.langInd
         self.ui.Language_LBL.setText(Labels.Language[self.langInd])
         self.ui.Username_LBL.setText(Labels.Username[self.langInd])
         self.ui.Password_LBL.setText(Labels.Password[self.langInd])

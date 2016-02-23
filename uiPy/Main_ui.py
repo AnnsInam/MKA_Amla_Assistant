@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'ui/Main.ui'
 #
-# Created: Mon Feb 22 18:31:17 2016
+# Created: Tue Feb 23 19:38:13 2016
 #      by: PyQt4 UI code generator 4.11.3
 #
 # WARNING! All changes made in this file will be lost!
@@ -90,10 +90,15 @@ class Ui_MainWindow(object):
         self.TimeTableRoom2.horizontalHeader().setCascadingSectionResizes(False)
         self.TimeTableRoom2.horizontalHeader().setDefaultSectionSize(135)
         self.TimeTableRoom2.horizontalHeader().setMinimumSectionSize(15)
-        self.imagewidget = ImageWidget(self.centralwidget)
-        self.imagewidget.setGeometry(QtCore.QRect(250, 0, 400, 51))
-        self.imagewidget.setOrientation(QtCore.Qt.Vertical)
-        self.imagewidget.setObjectName(_fromUtf8("imagewidget"))
+        self.groupBox = QtGui.QGroupBox(self.centralwidget)
+        self.groupBox.setGeometry(QtCore.QRect(260, 0, 360, 30))
+        self.groupBox.setTitle(_fromUtf8(""))
+        self.groupBox.setObjectName(_fromUtf8("groupBox"))
+        self.Bismillah_LBL = QtGui.QLabel(self.centralwidget)
+        self.Bismillah_LBL.setGeometry(QtCore.QRect(240, 30, 400, 20))
+        self.Bismillah_LBL.setText(_fromUtf8(""))
+        self.Bismillah_LBL.setAlignment(QtCore.Qt.AlignCenter)
+        self.Bismillah_LBL.setObjectName(_fromUtf8("Bismillah_LBL"))
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtGui.QMenuBar(MainWindow)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 848, 21))
@@ -113,4 +118,3 @@ class Ui_MainWindow(object):
         self.BTN_3.setText(_translate("MainWindow", "3", None))
         self.BTN_2.setText(_translate("MainWindow", "2", None))
 
-from guiqwt.plot import ImageWidget

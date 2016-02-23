@@ -141,17 +141,33 @@ QPushButton:pressed{
     <column/>
     <column/>
    </widget>
-   <widget class="ImageWidget" name="imagewidget">
+   <widget class="QGroupBox" name="groupBox">
     <property name="geometry">
      <rect>
-      <x>250</x>
+      <x>260</x>
       <y>0</y>
-      <width>400</width>
-      <height>51</height>
+      <width>360</width>
+      <height>30</height>
      </rect>
     </property>
-    <property name="orientation">
-     <enum>Qt::Vertical</enum>
+    <property name="title">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Bismillah_LBL">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>30</y>
+      <width>400</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
     </property>
    </widget>
   </widget>
@@ -167,13 +183,6 @@ QPushButton:pressed{
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
- <customwidgets>
-  <customwidget>
-   <class>ImageWidget</class>
-   <extends>QSplitter</extends>
-   <header>guiqwt.plot</header>
-  </customwidget>
- </customwidgets>
  <resources/>
  <connections/>
 </ui>

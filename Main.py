@@ -1,4 +1,5 @@
 import time
+import Labels
 
 from PyQt4 import QtCore, QtGui
 
@@ -16,6 +17,7 @@ class MainGUI(QtGui.QMainWindow):
         self.ui.setupUi(self)
         self.ui.Date.setText(time.strftime("%d/%m/%y"))
         self.Username = Username
+        self.ui.Bismillah_LBL.setText(Labels.Bismillah[langInd])
 
     def Create_Settings(self):
         pass
@@ -24,10 +26,10 @@ if __name__ == '__main__':
     import sys
     app = QtGui.QApplication(sys.argv)
     login = Login()
-    if login.exec_() == QtGui.QDialog.Accepted:
-        main = MainGUI(login.ui.Username.text(), login.langInd)
-    # main = MainGUI('AInam', login.langInd)
-        main.show()
+    # if login.exec_() == QtGui.QDialog.Accepted:
+    #     main = MainGUI(login.ui.Username.text(), login.langInd)
+    main = MainGUI('AInam', login.langInd)
+    main.show()
 
     sys.exit(app.exec_())
 
